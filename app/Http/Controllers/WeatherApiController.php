@@ -21,7 +21,7 @@ class WeatherApiController extends Controller
 
     private function cacheData($url)
     {
-        if (!Cache::has('weather')) {
+        if (!Cache::has('weather') || Cache::get('weather')['cod'] != "200") {
             $query = Http::get($url)->json();
             Cache::put('weather', $query, now()->addHour());
         }

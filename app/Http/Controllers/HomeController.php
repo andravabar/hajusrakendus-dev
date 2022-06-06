@@ -15,4 +15,9 @@ class HomeController extends Controller
     {
         return Inertia::render('Andrus');
     }
+
+    public function Andra()
+    {
+        return Inertia::render('Andra');
+    }
 }

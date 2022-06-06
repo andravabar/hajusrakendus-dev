@@ -22,12 +22,12 @@ export default {
     },
     props: {data: JSON},
     created(){
-        axios.get('https://epood.ta20pajuniit.itmajakas.ee/api/products')
+        axios.get('https://epood.ta20vabar.itmajakas.ee/api/Products')
             .then(response => this.products = response.data)
         }
 }
 import axios from 'axios'
-import Product from '../Components/ProductAndrus.vue';
+import Product from '../Components/ProductAndra.vue';
 
 var products;
 
